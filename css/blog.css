@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin-top: 4rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Variables */
+
+:root {
+    --brand-color: #442ee5 ;
+    --text-strong: #0c082b;
+    --text-weak: #2e2a4d;
+    --stroke-strong: #5c549c;
+    --stroke-weak: #bbb9cb;
+    --fill: #d6d5de;
+    --divider: 1px solid var(--stroke-weak);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    line-height: 1.5rem;
+    flex-wrap: wrap;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Open Sans",sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+    color: var(--text-weak);
+}
+
+.header {
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(0.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    border-bottom: var(--divider);
+}
+.header__content .header__title {
+    font-size: 40px;
+    white-space: nowrap;
+}
+
+.header__nav {
+    display: none;
+}
+
+.header .menu img {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.sidebar__menu{
+    position: fixed;
+    top: 68px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+    background: #fff;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    margin:0;
+}
+  
+.sidebar__menu .li-item {
+   padding-bottom: 6px;
+}
+
+.sidebar__menu .li-item:hover {
+    cursor: pointer;
+    background-color: var(--fill);
+}
+  
+.sidebar__menu .li-item a {
+    padding-right: 100%;
+    color: var(--text-weak);
+}
+
+.sidebar__menu.active {
+    display: flex;
+}
+
+.blog {
+    margin: 72px 0;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-content {
+    margin-bottom: 2rem;
+}
+
+.blog h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+ 
+.blog-1 img {
+    display: block;
+    width: 17rem;
+    height: 17rem;
+    margin-bottom: 1rem; 
+}
+
+.blog-2 {
+    margin-bottom: 1rem;
+}
+.blog-2 video{
+    margin-bottom: 1rem;
+    width: 17rem;
+}
+
+footer {
+    padding: .5rem 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(0.5rem);
+    border-top: var(--divider);
+}
+
+footer span {
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 480px) and (orientation: landscape) {
+    .blog  p {
+        width: calc(20rem - 5%);
+    }
+    .blog-1 img, .blog-2 video {
+        width: 20rem;
+        height: 20rem;
+    }
+    footer {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main{
+        margin: 48px;
+    }
+    .header {
+        padding: 1rem 3rem;
+    }
+    .header .menu img {
+        display: none;
+    }
+    .header__nav {
+        display: block;
+    }
+    .header__nav .header-ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .header__nav ul li a{
+        color: var(--text-weak);
+    }
+    .blog h2{
+        margin-bottom: 2rem;
+    }
+    .blog-content {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2rem;
+    }
+    .blog-1 img {
+        width: 16rem;
+        height: 16rem;
+        margin-right: 1rem;
+    }
+    .blog-2 video {
+        width: 19rem;
+        height: 17rem;
+        margin-right: 1rem;
+    }
+    footer {
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1024px) and (orientation: landscape)  {
+    .main {
+        margin: 72px;
+    }
+    .blog-1 img {
+        width: 22rem;
+        height: 22rem;
+        margin-right: 1.5rem;
+    }
+    .blog-2 video {
+        width: 26.5rem;
+        height: 26.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .blog {
+       margin: 80px 140px;
+    }
+}

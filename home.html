@@ -3,35 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
     <header class="header">
         
             <h2 class="header__title">Saba Habtamu</h2>
+            <div class="menu">
+                <img src="images/menu.svg" alt="menu" class="menu__icon">
+            </div>
+            
+
             <nav class="header__nav ">
                 <ul class="header-ul">
                     <li class="li-item"><a href="
                             #home">Home</a></li>
                     <li class="li-item"><a href="
-                            #education">Education</a></li>
+                            education.html">Education</a></li>
                     <li class="li-item"><a href="
-                            #blog">Blog</a></li>
+                            blog.html">Blog</a></li>
                     <li class="li-item"><a href="
-                            #about">About</a></li>
+                            about.html">About</a></li>
                     <li class="li-item"><a href="
-                            #contact">Contact</a></li>
+                            contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="menu">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-x"></i>
-            </div>
-
+            
     </header>
+
+        <ul class="sidebar__menu">
+            <li class="li-item"><a href="
+                    #home">Home</a></li>
+            <li class="li-item"><a href="
+                    education.html">Education</a></li>
+            <li class="li-item"><a href="
+                    blog.html">Blog</a></li>
+            <li class="li-item"><a href="
+                    about.html">About</a></li>
+            <li class="li-item"><a href="
+                    contact.html">Contact</a></li>
+        </ul>
 
 
     <main class="main">
@@ -39,26 +52,31 @@
             <section class="home" id="home">
                 
                 <div class="home__content">
+                    <div class="home__container">
                     <h1 class="home__title">I am <span>Saba Habtamu</span></h1>
                     <p>My name is Saba Habtamu. I am third year Software Engineering Student dedicated to learning the art of programming. With a focus on HTML, CSS and JAVASCRIPT, I am exited to build websites and create interactive projects to solve a problem. This is my first personal portfolio.</p>
 
                     <a href="https://www.canva.com/design/DAGXBLhvezE/KuyUJ7xO_eFELCVTIiuFBQ/edit?utm_content=DAGXBLhvezE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn" target="_blank">CV</a>
 
                     <div class="socials">
-                        <a href="https://github.com/sabahabtamu" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://t.me/Ur_daughter
-                        " target="_blank"><i class="fa-brands fa-telegram"></i></a>
-                        <a href="https://www.snapchat.com/add/players190
-                        " target="_blank"><i class="fa-brands fa-snapchat"></i></a>
-                        <a href="https://www.linkedin.com/in/saba-habtamu-65a03633a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/sabahabtamu" target="_blank"><img src="images/github.svg" alt="github"></a>
+                        <a href="https://t.me/Ur_daughter" target="_blank"><img src="images/telegram.svg" alt="telegram"></a>
+                        <a href="https://www.snapchat.com/add/players190" target="_blank"><img src="images/snapchat.svg" alt="snapchat"></a>
+                        <a href="https://www.linkedin.com/in/saba-habtamu-65a03633a/" target="_blank"><img src="images/linkedin.svg" alt="linkedin"></i></a>
                     </div>
                 </div>
-                <img src="images/pc.png" alt="laptop">
+                    <img src="images/pc.png" alt="laptop">
+                </div>
+                
 
             </section>
 
     </main>
 
-    <script src="main.js"></script>
+    <footer>
+        <p>Copyright <span>&copy;</span> 2024 by Saba Habtamu | All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin-top: 4.7rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Variables */
+
+:root {
+    --brand-color: #442ee5 ;
+    --text-strong: #0c082b;
+    --text-weak: #2e2a4d;
+    --stroke-strong: #5c549c;
+    --stroke-weak: #bbb9cb;
+    --fill: #d6d5de;
+    --divider: 1px solid var(--stroke-weak);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    line-height: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.main {
+    padding: 72px 32px 48px 32px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Open Sans",sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+    color: var(--text-weak);
+}
+
+.header {
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(0.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    border-bottom: var(--divider);
+}
+.header__content .header__title {
+    font-size: 40px;
+    white-space: nowrap;
+}
+
+.header__nav {
+    display: none;
+}
+
+.header .menu img {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.sidebar__menu{
+    position: fixed;
+    top: 68px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+    background: #fff;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    margin:0;
+}
+  
+.sidebar__menu .li-item {
+   padding-bottom: 6px;
+}
+
+.sidebar__menu .li-item:hover {
+    cursor: pointer;
+    background-color: var(--fill);
+}
+  
+.sidebar__menu .li-item a {
+    padding-right: 100%;
+    color: var(--text-weak);
+}
+
+.sidebar__menu.active {
+    display: flex;
+}
+
+.contact {
+    width: 100%;
+    margin: 16px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact h2 {
+    margin-bottom: 16px;
+}
+
+.form p {
+    margin-bottom: 1rem
+}
+
+input {
+    height: 2.5rem;
+    border: 1px solid var(--stroke-strong);
+}
+
+input, textarea {
+    width: 100%;
+    margin: .5rem;
+    padding: .2rem;
+    border: 1px solid var(--stroke-strong);
+} 
+
+textarea {
+    padding-top: .8rem;
+}
+
+.btn {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 275px;
+    font-size: 1rem;
+    text-align: center;
+    padding: .7rem 0;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 1.5rem;
+    background-color: var(--brand-color);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.btn:hover{
+    background: transparent;
+    color: var(--brand-color);
+    border: 1px solid var(--brand-color);
+    transform: scale(1.1);
+} 
+
+footer {
+    padding: .5rem 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(0.5rem);
+    border-top: var(--divider);
+}
+
+footer span {
+    font-size: 1.5rem;
+}
+
+
+@media screen and (min-width: 480px) and (orientation: landscape) {
+    .contact {
+        padding: 16px 32px;
+    }
+    .contact form p {
+        margin-bottom: 1rem;
+    }
+    input, textarea {
+        margin: 1.3rem;
+    }
+    .btn {
+        width: 50%;
+    }
+    footer {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main{
+        margin-top: 48px;
+    }
+    .contact{
+        align-items: flex-start;
+    }
+    .header {
+        padding: 1rem 3rem;
+    }
+    .header .menu img {
+        display: none;
+    }
+    .header__nav {
+        display: block;
+    }
+    .header__nav .header-ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .header__nav ul li a{
+        color: var(--text-weak);
+    }
+
+    .contact h2 {
+        margin-bottom: 2rem;
+        margin-left: 3rem;
+    }
+    form p {
+        margin-bottom: 1.5rem;
+    }
+    input {
+        height: 3rem;
+    }
+    input, textarea {
+        width: 110%;
+    }
+    .btn {
+        width: 25%;
+    }
+    footer {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+    .main {
+        padding: 80px;
+    }
+    .contact {
+        padding-right: 200px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .main {
+        padding-top: 80px;
+    }
+    .contact {
+       margin: 20px 140px;
+    }
+}
