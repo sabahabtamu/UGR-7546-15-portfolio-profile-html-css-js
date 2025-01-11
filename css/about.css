@@ -129,6 +129,7 @@ body {
 }
 
 .about .abt--heading {
+    font-size: 40px;
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
